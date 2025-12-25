@@ -1,0 +1,387 @@
+:root {
+--primary-color: #5D4037; /* Dark Brown (Coffee Bean) */
+--secondary-color: #A1887F; /* Soft Brown/Taupe */
+--background-light: #FAF8F5; /* Cream/Beige */
+--accent-gold: #B8860B; /* Subtle Gold for accents */
+--text-dark: #333;
+--font-stack: 'Georgia', serif; /* Elegant serif font */
+}
+
+/* --- Global Styles and Reset --- */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: var(--font-stack);
+line-height: 1.6;
+color: var(--text-dark);
+background-color: var(--background-light);
+}
+
+/* Utility Class for Content Centering */
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+display: inline-block;
+padding: 12px 25px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+letter-spacing: 1px;
+transition: background-color 0.3s ease, transform 0.2s ease;
+cursor: pointer;
+border: none;
+text-transform: uppercase;
+}
+
+.primary-btn {
+background-color: var(--accent-gold);
+color: var(--background-light);
+}
+
+.primary-btn:hover {
+background-color: #a37609;
+transform: translateY(-2px);
+}
+
+.secondary-btn {
+background-color: var(--primary-color);
+color: var(--background-light);
+}
+
+.secondary-btn:hover {
+background-color: #4e352f;
+}
+
+/* General Section Headings */
+section {
+padding: 80px 0;
+text-align: center;
+}
+
+section h3 {
+font-size: 2.5em;
+margin-bottom: 50px;
+color: var(--primary-color);
+position: relative;
+}
+
+section h3::after {
+content: '';
+display: block;
+width: 60px;
+height: 3px;
+background-color: var(--accent-gold);
+margin: 10px auto 0;
+}
+
+
+/* --- 1. Navbar Styling --- */
+.navbar {
+background-color: var(--primary-color);
+padding: 15px 0;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.navbar .logo {
+font-size: 1.8em;
+color: var(--accent-gold);
+font-weight: 900;
+}
+
+.nav-links a {
+color: var(--background-light);
+text-decoration: none;
+margin-left: 25px;
+font-weight: 500;
+text-transform: uppercase;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: var(--accent-gold);
+}
+
+.menu-toggle {
+background: none;
+border: none;
+color: var(--background-light);
+font-size: 1.5em;
+display: none; /* Hidden on desktop */
+}
+
+
+/* --- 2. Hero Section Styling --- */
+.hero-section {
+/* Placeholder image for background, replace with a high-quality coffee or lounge photo */
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x800?text=Elegant+Lounge+Background');
+background-size: cover;
+background-position: center;
+min-height: 80vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--background-light);
+text-align: center;
+}
+
+.hero-content {
+padding: 40px;
+}
+
+.slogan-sub {
+font-size: 1.5em;
+letter-spacing: 5px;
+text-transform: uppercase;
+color: var(--accent-gold);
+margin-bottom: 10px;
+}
+
+.slogan {
+font-size: 4.5em;
+margin-bottom: 30px;
+line-height: 1.1;
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* --- 3. Menu Section Styling --- */
+.menu-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+}
+
+.menu-item {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+text-align: left;
+transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+transform: translateY(-5px);
+}
+
+.menu-item img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+.menu-item h4 {
+font-size: 1.4em;
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+
+.menu-item p {
+font-size: 0.95em;
+color: var(--secondary-color);
+margin-bottom: 10px;
+}
+
+.menu-item .price {
+display: block;
+font-weight: bold;
+font-size: 1.3em;
+color: var(--accent-gold);
+margin-top: 10px;
+}
+
+
+/* --- 4. About Us Section Styling --- */
+.about-section {
+background-color: var(--primary-color);
+color: var(--background-light);
+}
+
+.about-section h3 {
+color: var(--accent-gold);
+}
+
+.about-content {
+display: flex;
+gap: 50px;
+align-items: center;
+text-align: left;
+}
+
+.about-content img {
+flex: 1;
+max-width: 40%;
+border-radius: 10px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+flex: 2;
+padding: 20px;
+}
+
+.about-text p {
+font-size: 1.1em;
+margin-bottom: 25px;
+}
+
+
+/* --- 5. Contact Section Styling --- */
+.contact-form {
+max-width: 500px;
+margin: 0 auto;
+text-align: left;
+background-color: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid var(--secondary-color);
+border-radius: 4px;
+font-size: 1em;
+background-color: var(--background-light);
+}
+
+.form-group textarea {
+resize: vertical;
+}
+
+.contact-form .primary-btn {
+width: 100%;
+padding: 15px;
+font-size: 1.1em;
+}
+
+.form-message {
+text-align: center;
+margin-top: 20px;
+font-weight: bold;
+}
+
+
+/* --- 6. Footer Styling --- */
+.footer {
+background-color: var(--primary-color);
+color: var(--secondary-color);
+padding: 30px 0;
+text-align: center;
+}
+
+.footer .container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.social-links {
+margin-bottom: 15px;
+}
+
+.social-links a {
+color: var(--background-light);
+font-size: 1.8em;
+margin: 0 10px;
+transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+color: var(--accent-gold);
+}
+
+
+/* ==================================
+Media Queries (Responsiveness)
+================================== */
+@media (max-width: 768px) {
+/* Navbar Mobile View */
+.navbar .container {
+flex-wrap: wrap;
+}
+
+.nav-links {
+/* Initially hidden on mobile */
+display: none;
+flex-direction: column;
+width: 100%;
+text-align: center;
+padding: 10px 0;
+}
+
+.nav-links.active {
+display: flex;
+}
+
+.nav-links a {
+margin: 10px 0;
+padding: 10px;
+border-bottom: 1px solid #4e352f;
+}
+
+.menu-toggle {
+display: block; /* Show the hamburger icon */
+}
+
+/* Hero Section Adjustments */
+.hero-section {
+min-height: 60vh;
+}
+
+.slogan {
+font-size: 3em;
+}
+
+/* About Section Adjustments */
+.about-content {
+flex-direction: column;
+text-align: center;
+}
+
+.about-content img {
+max-width: 80%;
+margin-bottom: 20px;
+}
+
+.about-text {
+padding: 0;
+}
+
+/* General Section Adjustments */
+section {
+padding: 50px 0;
+}
+}
